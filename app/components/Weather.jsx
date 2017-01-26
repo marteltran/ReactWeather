@@ -53,6 +53,7 @@ var Weather = React.createClass({
       that.setState({
         isLoading: false
       });
+      alert("YOUR ARE HERE");
       alert(errMsg);
     });
   },
@@ -70,11 +71,14 @@ var Weather = React.createClass({
     function renderMessage () {
         //if isLoading is true - Wait until it get reset to false
         //by the openWeatherMap.getTemp()
+        alert("Ready to render");
         if(isLoading) {
+            alert("Render waiting for return");
             return <h3>fetching weather ...</h3>
         }
         //if isLoading is false and both 'temperature' and 'location' exist
         else if (temperature && location) {
+          alert("get result OK");
           return <WeatherMessage temperature={temperature} location={location}/>;
         }
     }
