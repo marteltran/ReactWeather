@@ -33,7 +33,7 @@ var Weather = React.createClass({
     this.setState({isLoading: true});
 
     //sucess - get back temp value
-//    alert('Call openWeatherMap');
+    alert('Call openWeatherMap');
 
     //if nothing return from the openWeatherMap.getTemp() function
     //You will get error in the console, such as:
@@ -41,7 +41,7 @@ var Weather = React.createClass({
     //-->Check the openWeatherMap.getTemp() to return sth at the end.
     //Also reset 'isLoading' flag to false after done, even return error
     openWeatherMap.getTemp(loc).then( function (temp) {
-//      alert(temp);
+      alert(temp);
       that.setState({
         location: loc,
         temperature: temp,
