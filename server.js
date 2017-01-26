@@ -13,7 +13,7 @@ var app = express();
 //Tell Express to redirect 'https' to 'http'
 app.use( function (req, res, next) {
   //if request is 'http', then continue
-  if(req.headers[]'x-forwarded-proto'] == 'http') {
+  if(req.headers['x-forwarded-proto'] == 'http') {
     next();
   }
   //if req is https, then redirect to 'http'
