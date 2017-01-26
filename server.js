@@ -11,6 +11,8 @@ var app = express();
 //Add Express middleware function to use for your app
 
 //Tell Express to redirect 'https' to 'http'
+//ERROR: GET http://localhost/favicon.ico 404 (Not Found)
+//=>download & add favicon.ico image in your root folder
 // app.use( function (req, res, next) {
 //   //if request is 'http', then continue
 //   if(req.headers['x-forwarded-proto'] == 'http') {

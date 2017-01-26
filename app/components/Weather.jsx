@@ -41,7 +41,7 @@ var Weather = React.createClass({
     //-->Check the openWeatherMap.getTemp() to return sth at the end.
     //Also reset 'isLoading' flag to false after done, even return error
     openWeatherMap.getTemp(loc).then( function (temp) {
-      alert(temp);
+//      alert(temp);
       that.setState({
         location: loc,
         temperature: temp,
@@ -62,9 +62,9 @@ var Weather = React.createClass({
     //Get both values from state object and pass them to child components
     var {isLoading, temperature, location} = this.state;
 
-alert(isLoading);
-alert(temperature);
-alert(location);
+// alert(isLoading);
+// alert(temperature);
+// alert(location);
 
     //this function is used to detect which render message should be return
     function renderMessage () {
