@@ -18,26 +18,27 @@ var React = require('react');
 // });
 
 //Use Stateless Functional Component instead
-// var WeatherMessage = (props) => {
-//   //Get the props values from Parent component
-//   //Any props values from container/parent are inherited by child components
-//   var {temperature, location} = props;
-//
-// //Below statement NOT works as the state object of parent not passed to child.
-// //and the state of this component is NULL for now.
-// //    var {temperature, location} = this.state;
-//
-//   return (
-//     <h3>It is {temperature} at {location}</h3>
-//   );
-// }
+var WeatherMessage = (props) => {
+  //Get the props values from Parent component
+  //Any props values from container/parent are inherited by child components
+  var {temperature, location} = props;
 
-//Instead of passing 'props' into argument, you can simply pass its properies
-//Use Stateless Functional Component instead
-var WeatherMessage = (temperature, location) => {
+//Below statement NOT works as the state object of parent not passed to child.
+//and the state of this component is NULL for now.
+//    var {temperature, location} = this.state;
+
   return (
     <h3>It is {temperature} at {location}</h3>
   );
 }
+
+//Why the below NOT WORK ???
+//Instead of passing 'props' into argument, you can simply pass its properies
+//Use Stateless Functional Component instead
+// var WeatherMessage = (temperature, location) => {
+//   return (
+//     <h3>It is {temperature} at {location}</h3>
+//   );
+// }
 
 module.exports = WeatherMessage;

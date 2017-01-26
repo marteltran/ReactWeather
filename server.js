@@ -11,16 +11,16 @@ var app = express();
 //Add Express middleware function to use for your app
 
 //Tell Express to redirect 'https' to 'http'
-app.use( function (req, res, next) {
-  //if request is 'http', then continue
-  if(req.headers['x-forwarded-proto'] == 'http') {
-    next();
-  }
-  //if req is https, then redirect to 'http'
-  else {
-      res.redirect('http://' + req.hostname + req.url);
-  }
-});
+// app.use( function (req, res, next) {
+//   //if request is 'http', then continue
+//   if(req.headers['x-forwarded-proto'] == 'http') {
+//     next();
+//   }
+//   //if req is https, then redirect to 'http'
+//   else {
+//       res.redirect('http://' + req.hostname + req.url);
+//   }
+// });
 
 //Add a new folder into your project folder.
 //then tell Express to server static content from this folder
